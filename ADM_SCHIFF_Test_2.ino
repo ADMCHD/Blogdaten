@@ -51,7 +51,7 @@ if(Serial.available() > 0){ // Checks whether data is comming from the serial po
   digitalWrite(in4, LOW);   
    }
  if (t == 'B') {
-  // Rückwärts fahren
+  // RÃ¼ckwÃ¤rts fahren
     analogWrite(enA, 150);
   analogWrite(enB, 150);
   digitalWrite(in1, LOW);  
@@ -59,4 +59,13 @@ if(Serial.available() > 0){ // Checks whether data is comming from the serial po
   digitalWrite(in3, HIGH);  
   digitalWrite(in4, LOW);   
  }
+ if (t == 'S') {
+  // Stoppen
+  analogWrite(enA, 0);
+  analogWrite(enB, 0);
+  digitalWrite(in1, LOW);  
+  digitalWrite(in2, LOW);   
+  digitalWrite(in3, LOW);  
+  digitalWrite(in4, LOW);   
+ }  
 }
